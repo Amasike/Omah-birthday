@@ -1,0 +1,1116 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    overflow-y: scroll;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    display: flex;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 3rem;
+    background-color: rgb(126, 55, 4);
+    padding-top: 15px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.head-tag {
+    width: 50%;
+}
+
+.head-tag p {
+    font-size: 190%;
+    font-weight: 600;
+    margin-left: 10px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.menu-bars {
+    z-index: 7;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    background-color: rgb(75, 31, 2);
+    width: 20px;
+    height: 26px;
+    padding: 9px 12px 7px 12px;
+    border-radius: 20px;
+    box-shadow: 2px 3px 9px black;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 20px;
+    height: 3px;
+    background-color: seagreen;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 6px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -6px) rotate(45deg);
+}
+
+.nav-bar ul {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.nav-bar ul li {
+    font-size: 130%;
+    cursor: pointer;
+}
+.nav-bar li a {
+    text-decoration: none;
+    color: white;
+}
+
+.side-container {
+    z-index: 3;
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(126, 55, 4);
+    color: white;
+    animation: move 1s forwards;
+}
+
+@keyframes move {
+    from {
+        left: -30rem
+    }
+
+    to {
+        left: 0
+    }
+}
+
+.show {
+    display: block;
+}
+
+.head-cont {
+    height: 4rem;
+    width: 70%;
+    background-color: rgb(75, 31, 2);
+    font-size: 200%;
+    font-weight: 600;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    border-radius: 0 30px 30px 0;
+    margin-top: 3%;
+}
+
+.head-cont p {
+    margin-top: 2%;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.list-cont {
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 200%;
+    font-family: 'Dancing Script', cursive;
+}
+
+.list-cont p {
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+
+.gallery-container {
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-details {
+    color: white;
+    width: 80%;
+    margin: 2% auto;
+    background-color: chocolate;
+    border-radius: 10px;
+    animation: enter 1s forwards;
+}
+
+@keyframes enter {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 90%;
+    }
+}
+
+.gallery-close,
+.modal-close {
+    font-size: 300%;
+    font-weight: 600;
+    margin-left: 95%;
+    cursor: pointer;
+}
+
+.gallery-tag {
+    font-size: 300%;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.modal-image {
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 11;
+    background-color: rgb(0, 0, 0);
+}
+
+.image-cont {
+    height: 500px;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px white;
+    animation: enter 1s forwards;
+    margin-top: -2%;
+}
+
+.inner-image {
+    height: 560px;
+    width: 400px;
+    transition: all 1s ease;
+}
+
+.inner-image:hover {
+    scale: 1.5;
+}
+
+.gallery-body {
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    grid-column-gap: 4%;
+    width: 90%;
+    height: 70%;
+    padding: 2%;
+    margin: 1% auto;
+}
+
+.gallery-body img {
+    height: 160px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.gallery-body img:hover {
+    scale: 1.2;
+}
+
+.wish-container {
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.wish-details {
+    color: white;
+    width: 80%;
+    margin: 2% auto;
+    background-color: goldenrod;
+    border-radius: 10px;
+    animation: enter 1s forwards;
+}
+
+.acc-modal {
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 11;
+    background-color: black;
+}
+
+.acc-details {
+    color: white;
+    width: 80%;
+    height: 60%;
+    margin: 10% auto;
+    background-color: chocolate;
+    border-radius: 10px;
+}
+.acc-close {
+    font-size: 300%;
+    font-weight: 600;
+    margin: -2% 0 0 95%;
+    cursor: pointer;
+}
+.acc-body {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0 5%;
+    font-family: sans-serif;
+    line-height: 2;
+}
+.acc-left, .acc-right {
+    margin-left: 10%;
+    font-size: 110%;
+}
+.acc-left {
+    border-right: 3px solid rgb(126, 55, 4);
+}
+.acc-tag {
+    font-size: 110%;
+    font-weight: 600;
+}
+.wish-close {
+    font-size: 300%;
+    font-weight: 600;
+    margin: -2% 0 0 95%;
+    cursor: pointer;
+}
+
+.wish-head, .acc-head, .service-head {
+    font-size: 300%;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+}
+.wish-body {
+    width: 90%;
+    height: 60%;
+    padding: 2% 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 31%);
+    grid-column-gap: 3.5%;
+}
+
+.wish-box {
+    display:block;
+    height: 80px;
+    background: rgba(225, 225, 225, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(225, 225, 225, 0.18);
+    transition: all 1s ease;
+}
+
+.wish-box:hover {
+    scale: 1.2;
+}
+
+.wish-box img {
+    height: 80px;
+    width: 40%;
+    float: left;
+}
+
+.wish-box p {
+    width: 40%;
+    font-size: 120%;
+    font-family: sans-serif;
+}
+
+.wish-box button {
+    height: 20px;
+    width: 40%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 60%;
+    background-color: seagreen;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.wish-box button:hover {
+    background: transparent;
+    border: 1px solid seagreen;
+}
+.service-container  {
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 11;
+    color: white;
+    background-color: rgb(126, 55, 4);
+}
+.service-close {
+    font-size: 300%;
+    font-weight: 600;
+    margin-left: 95%;
+    cursor: pointer;
+}
+.service-details {
+    margin: 1rem;
+    text-align: center;
+    font-family: sans-serif;
+}
+.display-head {
+    font-size: 200%;
+    font-family: 'Dancing Script', cursive;
+    margin: 1rem 0 1rem 2rem;
+}
+.nav-btns {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.nav-btns button {
+    height: 20px;
+    width: 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(75, 31, 2);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.nav-btns button:hover {
+    background-color: transparent;
+    color: rgb(75, 31, 2);
+    border: 1px solid rgb(75, 31, 2);
+}
+.display-container {
+    width: 90%;
+    margin:10px auto 0 auto;
+    overflow: scroll;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-column-gap: 50px;
+    padding: 3rem 0;
+    scroll-behavior: smooth;
+}
+.display-box {
+    height: 250px;
+    width: 200px;
+    background: rgba(225, 225, 225, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(225, 225, 225, 0.18);
+    transition: all 1s ease;
+}
+.display-box:hover {
+    scale: 1.2;
+}
+.lefty {
+    margin-left: 2rem;
+}
+.righty {
+    margin-right: 2rem;
+}
+.display-box img {
+    height: 100px;
+    width: 200px;
+}
+.display-tag {
+    text-align: center;
+    font-size: 150%;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 1rem;
+    color: rgb(75, 31, 2);
+}
+.display-details {
+    text-align: center;
+    font-size: 90%;
+    font-family: sans-serif;
+    margin: 0 1rem;
+}
+.contact-us {
+    width: 90%;
+    margin: 2rem auto;
+    font-family: 'Dancing Script', cursive;
+    font-size: 150%;
+}
+.cont-box {
+    display: flex;
+    margin: 2rem 0;
+}
+.num-out {
+    margin-left: 10%;
+    color: rgb(75, 31, 2);
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.cont-box button {
+    width: 100px;
+    height: 2rem;
+    background-color: rgb(75, 31, 2);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-left: 10%;
+}
+
+.cont-box button:hover {
+    background-color: transparent;
+    color: rgb(75, 31, 2);
+    border: 1px solid green;
+}
+.wish {
+    display: none;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    font-size: 800%;
+    font-weight: 600;
+    line-height: 1.5;
+    padding-top: 10%;
+    background-image: url(/images/giphy.gif);
+    background-size: cover;
+    font-family: 'Dancing Script', cursive;
+}
+
+.one {
+    animation: big1 1s infinite;
+}
+
+.two {
+    animation: big1 1s infinite;
+    animation-delay: 0.5s;
+}
+
+.three {
+    animation: big1 1s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes big1 {
+    0% {
+        scale: 1.2;
+    }
+
+    50% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.2;
+    }
+}
+
+.timer-container {
+    height: 40rem;
+    width: 100%;
+    background-image: url(/images/Omah10.jpg);
+    background-size: cover;
+    color: white;
+    padding-top: 10rem;
+    transition: all 2s ease;
+}
+
+.top-message {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 500%;
+}
+
+.middle-message {
+    text-align: center;
+    font-size: 200%;
+    font-family: sans-serif;
+}
+
+.down-message {
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Dancing Script', cursive;
+}
+
+.time-cont {
+    margin: auto;
+    display: flex;
+    font-family: 'Dancing Script', cursive;
+    justify-content: center;
+    font-size: 300%;
+}
+
+.time-box {
+    text-align: center;
+    font-weight: 600;
+}
+
+.time-up {
+    font-size: 50%;
+    font-weight: 100;
+}
+
+.thanksgiving-cont {
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+    color: rgb(126, 55, 4);
+}
+
+.thanks-follow {
+    font-size: 250%;
+    color: goldenrod;
+    margin: 1rem 0;
+}
+
+.thanks-details {
+    font-size: 120%;
+    margin: 0 1rem;
+}
+
+.image-div {
+    height: 30rem;
+    width: 100%;
+    background-image: url(/images/Omah3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.d-day {
+    background-color: goldenrod;
+    color: white;
+    padding: 2rem 0;
+}
+
+.day-tag {
+    text-align: center;
+    font-size: 200%;
+    margin-bottom: 2rem;
+}
+
+.day-details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    line-height: 2;
+}
+
+.day-left {
+    border-right: 3px solid rgb(126, 55, 4);
+}
+
+.day-head {
+    font-size: 150%;
+    font-weight: 550;
+}
+
+.wish-list {
+    padding: 1rem 0;
+    color: rgb(126, 55, 4);
+    text-align: center;
+    margin-top: 2rem;
+}
+.wish-word {
+    font-family: sans-serif;
+    margin: 1rem 0;
+}
+.wish-list button {
+    width: 100px;
+    height: 2rem;
+    background-color: rgb(126, 55, 4);
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-size: 120%;
+}
+
+.wish-list button:hover {
+    background-color: transparent;
+    color: rgb(126, 55, 4);
+    border: 1px solid green;
+}
+
+.gift-image {
+    height: 40%;
+    width: 40%;
+    display: block;
+    margin: 1rem auto;
+    animation: wave 1s infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+.direct {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.colors,
+.activities {
+    text-align: center;
+    line-height: 2;
+    color: rgb(126, 55, 4);
+}
+
+.color-tag,
+.act-tag,
+.contact-tag,
+.wish-tag,
+.thanks-tag {
+    font-family: 'Dancing Script', cursive;
+    font-size: 300%;
+    font-weight: 600;
+}
+
+.wine {
+    color: brown;
+}
+
+.oxblood {
+    color: darkred;
+}
+
+.gold {
+    color: goldenrod;
+}
+
+.green {
+    color: seagreen;
+}
+
+.contact {
+    text-align: center;
+    color: rgb(126, 55, 4);
+    margin-top: 2rem;
+}
+
+.contact-cont {
+    display: flex;
+    line-height: 2;
+    justify-content: space-around;
+    font-size: 200%;
+    margin-top: 1rem;
+}
+
+.contact-icons {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.phone {
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.contact a {
+    color: rgb(126, 55, 4);
+    font-size: 150%;
+}
+
+footer {
+    width: 100%;
+    height: 15rem;
+    background-color: brown;
+    color: white;
+}
+.foot-items {
+    font-family: sans-serif;
+    font-size: 150%;
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.foot-items p {
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+.foot-items a {
+    color: white;
+    text-decoration: none;
+}
+.mark {
+    margin: 1rem 0 0 5%;
+    font-size: 120%;
+}
+
+@media (min-width: 1024px) and (max-width: 1150px) {
+
+    .color-tag,
+    .act-tag,
+    .contact-tag,
+    .wish-tag,
+    .thanks-tag {
+        font-size: 270%;
+    }
+    .wish-box p {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .color-tag,
+    .act-tag,
+    .contact-tag,
+    .wish-tag,
+    .thanks-tag {
+        font-size: 200%;
+    }
+
+    .nav-bar ul li {
+        font-size: 100%;
+    }
+
+    .direct {
+        display: block;
+    }
+
+    .gallery-body {
+        grid-template-columns: repeat(3, 30.5%);
+    }
+
+    .gallery-body img {
+        height: 100px;
+    }
+    .wish-box img {
+        height: 80px;
+        float: left;
+        width: 50%;
+    }
+    .wish-box p {
+        margin: 0;
+        font-size: 90%;
+    }
+    .wish-box button {
+        margin: 0;
+        width: 45%;
+    }
+    .acc-details {
+        margin-top: 15%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+
+    .color-tag,
+    .act-tag,
+    .contact-tag,
+    .wish-tag,
+    .thanks-tag {
+        font-size: 200%;
+    }
+
+    .nav-bar ul {
+        display: none;
+    }
+
+    .menu-bars {
+        display: inline-block;
+    }
+
+    .direct {
+        display: block;
+    }
+    .fa {
+        font-size: 80%;
+    }
+
+    .gallery-body {
+        grid-template-columns: repeat(3, 30.5%);
+    }
+
+    .gallery-body img {
+        height: 100px;
+    }
+
+    .gallery-close {
+        margin-left: 90%;
+    }
+
+    .modal-close {
+        margin-left: 95%;
+    }
+
+    .image-cont {
+        width: 300px;
+    }
+
+    .inner-image {
+        width: 300px;
+    }
+    .wish-close {
+        margin-left: 95%;
+        font-size: 150%;
+        margin-top: 0;
+    }
+    .wish-head {
+        font-size: 150%;
+    }
+    .wish-body {
+        grid-template-columns: 45% 45%;
+        grid-column-gap: 10%;
+        height: 80%;
+    }
+    .wish-box {
+        display: block;
+        height: 70px;
+    }
+    .wish-box img {
+        width: 40%;
+        height: 70px;
+        float: left;
+    }
+    .wish-box p {
+        margin: 0;
+        font-size: 80%;
+        width: 55%;
+    }
+    .wish-box button {
+        margin: 0;
+        width: 40%;
+    }
+    .acc-head {
+        font-size: 150%;
+    }
+    .acc-details {
+        margin-top: 15%;
+        height: 75%;
+    }
+    .acc-body {
+        font-size: 100%;
+        margin-top: 0;
+    }
+    .acc-close {
+        font-size: 200%;
+        margin-left: 90%;
+    }
+    .service-close {
+        margin-left: 85%;
+    }
+    .service-head {
+        font-size: 200%;
+    }
+    .display-head {
+        font-size: 180%;
+    }
+    .nav-btns {
+        display: none;
+    }
+    .contact-us {
+        font-size: 110%;
+    }
+}
+
+@media (max-width: 399px) {
+    .nav-bar ul {
+        display: none;
+    }
+
+    .menu-bars {
+        display: inline-block;
+    }
+    .head-tag {
+        width: 70%;
+        font-size: 80%;
+    }
+    .direct {
+        display: block;
+    }
+    .head-cont {
+        width: 80%;
+    }
+    .head-cont p {
+        font-size: 85%;
+        margin-top: 6%;
+    }
+
+    .color-tag,
+    .act-tag,
+    .contact-tag,
+    .wish-tag,
+    .thanks-tag {
+        font-size: 150%;
+    }
+
+    .fa {
+        font-size: 70%;
+    }
+
+    .gallery-body {
+        grid-template-columns: repeat(3, 30.5%);
+    }
+
+    .gallery-body img {
+        height: 100px;
+    }
+
+    .gallery-close {
+        margin-left: 85%;
+    }
+
+    .modal-close {
+        margin-left: 90%;
+    }
+
+    .image-cont {
+        width: 250px;
+    }
+
+    .inner-image {
+        width: 250px;
+    }
+    .wish-close {
+        margin-left: 90%;
+        font-size: 150%;
+        margin-top: 0;
+    }
+    .wish-head {
+        font-size: 150%;
+    }
+    .wish-body {
+        display: block;
+        width: 80%;
+        height: 75%;
+        margin: 0 auto;
+        border: 2px solid rgb(75, 31, 2);
+        border-radius: 20px;
+    }
+    .wish-box {
+        display: block;
+        height: 70px;
+        width: 85%;
+        margin: 1rem auto;
+    }
+    .wish-box img {
+        width: 40%;
+        height: 70px;
+        float: left;
+    }
+    .wish-box p {
+        margin: 0;
+        font-size: 90%;
+        width: 55%;
+    }
+    .wish-box button {
+        margin: 0;
+        width: 45%;
+        height: 20px;
+        font-size: 80%;
+    }
+    .timer-container {
+        background-position-x: center;
+        padding-top: 1rem;
+    }
+    .acc-head {
+        font-size: 170%;
+    }
+    .acc-details {
+        margin-top: 2%;
+        height: 90%;
+    }
+    .acc-body {
+        display: block;
+        font-size: 90%;
+        margin-top: 0;
+    }
+    .acc-close {
+        font-size: 200%;
+        margin-left: 85%;
+    }
+    .acc-left {
+        border-right: none;
+        border-bottom: 3px solid rgb(126, 55, 4);
+    }
+    .service-close {
+        margin-left: 85%;
+    }
+    .service-head {
+        font-size: 200%;
+    }
+    .nav-btns {
+        display: none;
+    }
+    .display-head {
+        font-size: 180%;
+    }
+    .contact-us {
+        font-size: 120%;
+    }
+    .cont-box {
+        display: block;
+    }
+    .num-out {
+        margin: 1rem 0;
+        text-align: center;
+    }
+    .cont-box button {
+        margin: 1rem 30%;
+    }
+    .wish {
+        font-size: 500%;
+    }
+}
